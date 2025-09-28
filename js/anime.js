@@ -32,31 +32,42 @@ document.addEventListener("DOMContentLoaded", () => {
             // Постер
             document.getElementById("anime-poster").src = anime.images.poster;
 
-            // Получаем рейтинг с OMDb
-            const apiKey = "941a346b";
-            const movieTitle = anime.title;
-
-            fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(movieTitle)}&apikey=${apiKey}`)
+            // Получаем данные с Jikan
+            fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(anime.title)}`)
             .then(response => response.json())
             .then(data => {
-                if (data.Response === "True") {
-                const imdbRating = parseFloat(data.imdbRating); // берём рейтинг IMDb
-                document.getElementById("rating-value").textContent = `${imdbRating}/10`;
+                if (data.data && data.data.length > 0) {
+                // Найти точное совпадение по названию или взять первый результат
+                const jikanAnime = data.data.find(a => a.title === anime.title) || data.data[0];
 
-                // Переводим в 5-звёздочную систему
-                const starsCount = Math.round(imdbRating / 2);
-                const stars = "★★★★★☆☆☆☆☆".slice(0, starsCount + 5).slice(0, 5);
-                document.getElementById("rating-stars").textContent = stars;
+                // Рейтинг
+                const score = jikanAnime.score || 0;
+                document.getElementById("rating-value").textContent = `${score}/10`;
+                const starsCount = Math.round(score / 2);
+                document.getElementById("rating-stars").textContent =
+                    "★★★★★☆☆☆☆☆".slice(0, starsCount + 5).slice(0, 5);
+
+                // Постер
+                const posterUrl = jikanAnime.images.jpg.large_image_url || anime.images.poster;
+                document.getElementById("anime-poster").src = posterUrl;
+
                 } else {
-                // Если фильма нет в OMDb — fallback на JSON
-                const ratingStars = "★★★★★".slice(0, Math.round(anime.rating)) + "☆☆☆☆☆".slice(Math.round(anime.rating));
-                document.getElementById("rating-stars").textContent = ratingStars;
+                // fallback на JSON
                 document.getElementById("rating-value").textContent = `${anime.rating}/5`;
-                console.error("Movie not found in OMDb:", movieTitle);
+                document.getElementById("rating-stars").textContent =
+                    "★★★★★".slice(0, Math.round(anime.rating)) + "☆☆☆☆☆".slice(Math.round(anime.rating));
+                document.getElementById("anime-poster").src = anime.images.poster;
+                console.error("Anime not found in Jikan:", anime.title);
                 }
             })
-            .catch(err => console.error(err));
-
+            .catch(err => {
+                // fallback на JSON
+                document.getElementById("rating-value").textContent = `${anime.rating}/5`;
+                document.getElementById("rating-stars").textContent =
+                "★★★★★".slice(0, Math.round(anime.rating)) + "☆☆☆☆☆".slice(Math.round(anime.rating));
+                document.getElementById("anime-poster").src = anime.images.poster;
+                console.error(err);
+            });
 
             // Режиссер и актеры
             document.getElementById("anime-director").textContent = anime.director;

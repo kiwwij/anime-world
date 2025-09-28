@@ -37,6 +37,7 @@
 
     {
         "id": "frieren_beyond_journeys_end",
+        "mal_id": 52991,
         "title": "Frieren: Beyond Journey's End",
         "year": "2023",
         "genres": ["Fantasy", "Adventure", "Drama"],
@@ -67,6 +68,43 @@
                 "img/frieren_beyond_journeys_end/manga/vol2.webp",
                 "img/frieren_beyond_journeys_end/manga/vol3.jpg",
                 "img/frieren_beyond_journeys_end/manga/vol4.jpg"
+            ]
+        }
+    },
+
+    {
+        "id": "vinland_saga",
+        "mal_id": 37521,
+        "title": "Vinland Saga",
+        "year": "2019",
+        "genres": ["Action", "Adventure", "Drama", "Historical", "Seinen"],
+        "duration": "24min per episode",
+        "type": "TV",
+        "language": "Japanese",
+        "director": "Shuhei Yabuta",
+        "cast": ["Yuto Uemura", "Naoya Uchida", "Akio Otsuka", "Kensho Ono"],
+        "description": "A tale of revenge and redemption set in the age of the Vikings. A young boy, Thorfinn, joins a band of mercenaries led by the man who killed his father, solely for the chance to challenge him to a duel and achieve vengeance. His journey, however, evolves into a profound exploration of the true meaning of being a warrior and the quest for a peaceful land free from war and slavery.",
+        "quote": "You have no enemies. No one in the world is your enemy.",
+        "rating": 4.8,
+        "images": {
+            "poster": "img/vinland_saga/poster.jpg",
+            "header": "img/vinland_saga/header.jpg",
+            "scenes": [
+                "img/vinland_saga/scenes/1.jpg",
+                "img/vinland_saga/scenes/2.jpg",
+                "img/vinland_saga/scenes/3.jpg",
+                "img/vinland_saga/scenes/4.jpg",
+                "img/vinland_saga/scenes/5.jpg",
+                "img/vinland_saga/scenes/6.jpg",
+                "img/vinland_saga/scenes/7.jpg",
+                "img/vinland_saga/scenes/8.jpg",
+                "img/vinland_saga/scenes/9.jpg"
+            ],
+            "manga": [
+                "img/vinland_saga/manga/vol1.jpg",
+                "img/vinland_saga/manga/vol2.jpg",
+                "img/vinland_saga/manga/vol3.jpg",
+                "img/vinland_saga/manga/vol4.jpg"
             ]
         }
     }
