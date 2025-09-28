@@ -1,0 +1,315 @@
+/* СВЕТЛАЯ ТЕМА ГЛАВНОЙ СТРАНИЦЫ ----------------------------------------------------------------------------------------------------------- */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #fff6f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-header {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+    color: #d84315;
+    font-weight: bold;
+}
+
+.site-subtitle {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #444;
+    opacity: 0.85;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    background: #ffffff;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    max-width: 500px;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    background: #fcefe9;
+    color: #333;
+}
+
+.search-btn {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-btn:hover {
+    background: #f4511e;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #ffe0d5;
+    padding: 1.2rem 2rem;
+    border-top: 1px solid #f5c6b8;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-left p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.footer-right a img {
+    width: 28px;
+    height: 28px;
+    margin-left: 0.8rem;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-right a img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* СМЕНА ТЕМЫ с Uiverse.io от rishichawda -------------------------------------------------------------------------------------------------- */
+#theme-toggle-button {
+  font-size: 10px;
+  position: relative;
+  display: inline-block;
+  width: 7em;
+  position: fixed;
+  top: 0;
+  right: 13px;
+  cursor: pointer;
+}
+
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}
+
+/* ТЁМНАЯ ТЕМА ГЛАВНОЙ СТРАНИЦЫ ------------------------------------------------------------------------------------------------------------ */
+body.dark-theme {
+    background-color: #0d1b2a;
+    color: #e0e6f0;
+}
+
+body.dark-theme .main-header {
+    background: linear-gradient(135deg, #1b263b, #0d1b2a);
+    color: #e0e6f0;
+}
+
+body.dark-theme .site-title {
+    color: #64a0c8;
+}
+
+body.dark-theme .site-subtitle {
+    color: #b0c7e0;
+    opacity: 0.85;
+}
+
+body.dark-theme .search-container {
+    background: #1b263b;
+}
+
+body.dark-theme .search-input {
+    background: #16213e;
+    color: #e0e6f0;
+}
+
+body.dark-theme .search-btn {
+    background: #336699;
+    color: #fff;
+}
+
+body.dark-theme .search-btn:hover {
+    background: #1f4e8c;
+}
+
+body.dark-theme footer {
+    background: #1b263b;
+    border-top: 1px solid #2e3a59;
+}
+
+body.dark-theme .footer-left p {
+    color: #b0c7e0;
+}
+
+/* РЕЗУЛЬТАТЫ ПОИСКА ----------------------------------------------------------------------------------------------------------------------- */
+.search-results {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 5%;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: #ffe4e4;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-item:hover {
+    background-color: #fed4d4;
+}
+
+.search-poster {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.search-info h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.search-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0 10px;
+}
+
+.view-btn {
+    padding: 8px 14px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #2c80b4;
+}
+
+/* ТЁМНАЯ ТЕМА РЕЗУЛЬТАТОВ ПОИСКА ---------------------------------------------------------------------------------------------------------- */
+body.dark-theme .search-item {
+    background-color: #0f1b2d;
+    color: #dce7ff;
+}
+
+body.dark-theme .search-item:hover {
+    background-color: #16253b;
+}
+
+body.dark-theme .search-info p {
+    color: #a9b9d6;
+}
+
+body.dark-theme .view-btn {
+    background-color: #3c73d4;
+}
+
+body.dark-theme .view-btn:hover {
+    background-color: #305ba6;
+}

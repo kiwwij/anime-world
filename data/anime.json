@@ -1,0 +1,73 @@
+[
+    {
+        "id": "the_tunnel_to_summer_the_exit_of_goodbye",
+        "title": "The Tunnel to Summer, the Exit of Goodbye",
+        "year": "2022",
+        "genres": ["Shoujo", "Drama", "Romance"],
+        "duration": "1h 24min",
+        "type": "Movie",
+        "language": "Japanese",
+        "director": "Tomohisa Taguchi",
+        "cast": ["Marie litoyo", "Ouji Suzuka"],
+        "description": "The Urashima Tunnel can grant any wish... for a price. High school boy Kaoru, plagued by a troubled past, teams up with Anzu, a girl who struggles to place obligations before her dreams, to investigate the Tunnel. But the cost of their hearts' desires may be too high to pay. This is an unforgettable summer story of nostalgia, young love and bending time itself.",
+        "quote": "Goodbyes are like tunnels, leading to new beginnings.",
+        "rating": 4.5,
+        "images": {
+            "poster": "img/the_tunnel_to_summer_the_exit_of_goodbye/poster.jpeg",
+            "header": "img/the_tunnel_to_summer_the_exit_of_goodbye/header.jpg",
+            "scenes": [
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/1.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/2.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/3.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/4.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/5.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/6.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/7.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/8.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/scenes/9.jpg"
+            ],
+            "manga": [
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/manga/vol1.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/manga/vol2.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/manga/vol3.jpg",
+                "img/the_tunnel_to_summer_the_exit_of_goodbye/manga/vol4.jpg"
+            ]
+        }
+    },
+
+    {
+        "id": "frieren_beyond_journeys_end",
+        "title": "Frieren: Beyond Journey's End",
+        "year": "2023",
+        "genres": ["Fantasy", "Adventure", "Drama"],
+        "duration": "24min per episode",
+        "type": "TV",
+        "language": "Japanese",
+        "director": "Keiichiro Saito",
+        "cast": ["Atsumi Tanezaki", "Kana Ichinose", "Chiaki Kobayashi", "Nobuhiko Okamoto"],
+        "description": "After the hero defeats the Demon King, the elf mage Frieren embarks on a journey to understand the fleeting nature of human life and the emotions that come with it. Along the way, she reflects on her past adventures and forms bonds with new companions, learning what it truly means to live.",
+        "quote": "Time moves differently for humans and elves, yet memories linger in the heart.",
+        "rating": 4.7,
+        "images": {
+            "poster": "img/frieren_beyond_journeys_end/poster.jpg",
+            "header": "img/frieren_beyond_journeys_end/header.jpg",
+            "scenes": [
+                "img/frieren_beyond_journeys_end/scenes/1.jpg",
+                "img/frieren_beyond_journeys_end/scenes/2.jpg",
+                "img/frieren_beyond_journeys_end/scenes/3.jpg",
+                "img/frieren_beyond_journeys_end/scenes/4.jpg",
+                "img/frieren_beyond_journeys_end/scenes/5.jpg",
+                "img/frieren_beyond_journeys_end/scenes/6.jpg",
+                "img/frieren_beyond_journeys_end/scenes/7.jpg",
+                "img/frieren_beyond_journeys_end/scenes/8.jpg",
+                "img/frieren_beyond_journeys_end/scenes/9.jpg"
+            ],
+            "manga": [
+                "img/frieren_beyond_journeys_end/manga/vol1.webp",
+                "img/frieren_beyond_journeys_end/manga/vol2.webp",
+                "img/frieren_beyond_journeys_end/manga/vol3.jpg",
+                "img/frieren_beyond_journeys_end/manga/vol4.jpg"
+            ]
+        }
+    }
+]

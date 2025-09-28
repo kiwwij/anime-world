@@ -1,0 +1,464 @@
+:root {
+    --primary-color: #0b91c6;
+    --secondary-color: #1a5276;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #fff;
+    --bg-dark: #2c3e50;
+    --bg-light: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.anime-header {
+    position: relative;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.anime-basic-info {
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.anime-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.anime-meta {
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+    text-decoration: none;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+.anime-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+
+.anime-poster {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.rating {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.rating-stars {
+    color: gold;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.rating-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.director-cast {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.director-cast p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.description {
+    margin-bottom: 3rem;
+}
+
+.description h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.gallery h3, .manga-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.scenes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.scenes-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.scenes-grid img:hover {
+    transform: scale(1.05);
+}
+
+.quote-section {
+    margin: 3rem 0;
+}
+
+.anime-quote {
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: var(--border-radius);
+    line-height: 1.6;
+}
+
+.manga-covers {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 2rem 1rem 0.5rem; /* добавляем правый паддинг */
+    scrollbar-width: thin;
+}
+
+.manga-covers img {
+    height: 250px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.manga-covers img:hover {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: var(--border-radius);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.main-footer, .anime-footer {
+    background: var(--bg-dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer {
+    padding: 1.2rem 2rem;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer-right a img {
+    width: 28px;
+    height: 28px;
+    margin-left: 0.8rem;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-right a img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+/* СМЕНА ТЕМЫ с Uiverse.io от rishichawda -------------------------------------------------------------------------------------------------- */
+#theme-toggle-button {
+  font-size: 10px;
+  position: relative;
+  display: inline-block;
+  width: 7em;
+  position: fixed;
+  top: 0;
+  right: 13px;
+  cursor: pointer;
+}
+
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
+}
+
+/* ТЁМНАЯ ТЕМА АНИМЕ СТРАНИЦЫ -------------------------------------------------------------------------------------------------------------- */
+body.dark-theme {
+    background-color: #0b1220;
+    color: #e0e6f0;
+}
+
+body.dark-theme .anime-header {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b); 
+}
+
+body.dark-theme .header-overlay {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+body.dark-theme .anime-title {
+    color: #9dc1ff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+body.dark-theme .anime-meta span {
+    color: #c2d4ff;
+}
+
+body.dark-theme .back-btn {
+    background: rgba(20, 30, 60, 0.8);
+    color: #e0e6f0;
+}
+body.dark-theme .back-btn:hover {
+    background: rgba(20, 30, 60, 1);
+}
+
+body.dark-theme .anime-content {
+    color: #e0e6f0;
+}
+
+body.dark-theme .anime-poster {
+    box-shadow: 0 0 12px rgba(0, 128, 255, 0.4);
+}
+
+body.dark-theme .rating-stars {
+    color: #ffd700;
+}
+body.dark-theme .rating-value {
+    color: #70a5ff;
+}
+
+body.dark-theme .director-cast {
+    background: #16213e;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+body.dark-theme .director-cast p {
+    color: #d0dcf5;
+}
+
+body.dark-theme .description h3 {
+    color: #70a5ff;
+}
+body.dark-theme .description p {
+    color: #cdd7ef;
+}
+
+body.dark-theme .gallery h3,
+body.dark-theme .manga-section h3 {
+    color: #70a5ff;
+}
+body.dark-theme .scenes-grid img {
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.4);
+}
+body.dark-theme .scenes-grid img:hover {
+    transform: scale(1.05);
+}
+
+body.dark-theme .anime-quote {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: #ffffff;
+}
+
+body.dark-theme .manga-covers img {
+    box-shadow: 0 0 10px rgba(0, 128, 255, 0.4);
+}
+
+body.dark-theme .lightbox {
+    background-color: rgba(0, 0, 0, 0.95);
+}
+body.dark-theme .close,
+body.dark-theme .lightbox-nav {
+    color: #ffffff;
+}
+
+body.dark-theme .anime-footer {
+    background: #0d1b2a;
+    color: #c2d4ff;
+}
