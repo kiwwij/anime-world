@@ -1,0 +1,247 @@
+html {
+    height: 100%;
+    background-color: #fff6f2; 
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff6f2;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-header {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+    color: #d84315;
+    font-weight: bold;
+}
+
+.site-subtitle {
+    margin-top: 0.3rem;
+    font-size: 1rem;
+    color: #444;
+    opacity: 0.85;
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.anime-card {
+    background: #ffe4e4;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.anime-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.anime-card img:hover {
+    transform: scale(1.05);
+}
+
+.anime-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #d84315;
+}
+
+.anime-card p {
+    margin: 0 0 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer {
+    background: #ffe0d5;
+    padding: 1.2rem 2rem;
+    border-top: 1px solid #f5c6b8;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-left p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.footer-right a img {
+    width: 28px;
+    height: 28px;
+    margin-left: 0.8rem;
+    opacity: 0.85;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-right a img:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+body.dark-theme {
+    background-color: #0f1a2b;
+    color: #e0e6f0;
+}
+
+body.dark-theme .main-header {
+    background: linear-gradient(135deg, #1b263b, #0d1b2a);
+    color: #e0e6f0;
+}
+
+body.dark-theme .site-title {
+    color: #64a0c8;
+}
+
+body.dark-theme .site-subtitle {
+    color: #b0c7e0;
+    opacity: 0.85;
+}
+
+body.dark-theme .anime-card {
+    background-color: #142236;
+    color: #dce7ff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+body.dark-theme .anime-card h3 {
+    color: #81c3ff;
+}
+
+body.dark-theme .anime-card p {
+    color: #a0b8d0;
+}
+
+body.dark-theme footer {
+    background-color: #1b263b;
+    border-top: 1px solid #2e3a59;
+}
+
+body.dark-theme .footer-left p {
+    color: #b0c7e0;
+}
+
+/* СМЕНА ТЕМЫ с Uiverse.io */
+#theme-toggle-button {
+    font-size: 10px;
+    position: fixed;
+    top: 0;
+    right: 13px;
+    cursor: pointer;
+    width: 7em;
+}
+
+#toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#toggle:checked + svg #container {
+    fill: #2b4360;
+}
+
+#toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+}
+
+#sun { opacity: 1; }
+#toggle:checked + svg #sun { opacity: 0; }
+
+#moon { opacity: 0; }
+#toggle:checked + svg #moon { opacity: 1; }
+
+#cloud { opacity: 1; }
+#toggle:checked + svg #cloud { opacity: 0; }
+
+#stars { opacity: 0; }
+#toggle:checked + svg #stars { opacity: 1; }
+
+.back-btn {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+    text-decoration: none;
+    z-index: 10;
+    background: rgba(0,0,0,0.7);
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    background: rgba(0,0,0,0.9);
+    transform: translateY(-2px);
+}
+
+body.dark-theme .back-btn {
+    background: rgba(20, 30, 60, 0.8);
+    color: #e0e6f0;
+}
+
+body.dark-theme .back-btn:hover {
+    background: rgba(20, 30, 60, 1);
+}
+
+@media (max-width: 600px) {
+    .back-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

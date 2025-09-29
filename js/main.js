@@ -90,3 +90,45 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Enter") searchAnime(searchInput.value);
     });
 });
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const grid = document.getElementById('anime-grid');
+
+    try {
+        // Загружаем локальный JSON
+        const response = await fetch('data/anime.json');
+        const animeData = await response.json();
+
+        // Для каждого аниме создаем карточку
+        for (const anime of animeData) {
+            let posterUrl = anime.images.poster; // fallback
+
+            try {
+                const apiResponse = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(anime.title)}`);
+                const apiData = await apiResponse.json();
+
+                if (apiData.data && apiData.data.length > 0) {
+                    const match = apiData.data.find(a => a.title.toLowerCase() === anime.title.toLowerCase()) || apiData.data[0];
+                    posterUrl = match.images.jpg.large_image_url;
+                }
+            } catch (err) {
+                console.warn(`Jikan API error for "${anime.title}":`, err);
+            }
+
+            // Создаем карточку с кликабельным постером
+            const card = document.createElement('div');
+            card.classList.add('anime-card');
+            card.innerHTML = `
+                <a href="anime.html?id=${anime.id}">
+                    <img src="${posterUrl}" alt="${anime.title}">
+                </a>
+                <h3>${anime.title}</h3>
+                <p>${anime.genres.join(', ')} | ${anime.duration}</p>
+            `;
+            grid.appendChild(card);
+        }
+    } catch (error) {
+        console.error('Ошибка загрузки JSON:', error);
+        grid.innerHTML = '<p>Failed to load anime data.</p>';
+    }
+});

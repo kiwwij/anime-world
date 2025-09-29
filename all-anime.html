@@ -1,44 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AnimeWorld – Explore the Best Anime</title>
-
-    <meta name="description" content="Discover the best anime! Trailers, reviews, and recommendations. Find your next favorite anime to watch.">
-    <meta name="keywords" content="anime, best anime, top anime, anime recommendations, anime trailers, anime reviews, manga, new anime">
-    <meta name="author" content="kiwwij">
-
-    <link id="dynamic-favicon" rel="icon" href="img/favicons/icon3.png" type="image/png">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/adaptation.css">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="AnimeWorld – Your Gateway to Anime">
-    <meta property="og:description" content="Find new anime to watch! Recommendations, reviews, and trailers of the best series.">
-
-    <!-- Картинка --> <meta property="og:image" content="https://your-site.com/images/anime-preview.jpg">
-    <!-- Ссылка --> <meta property="og:url" content="https://animeworld.com">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AnimeWorld – Explore the Best Anime">
-    <meta name="twitter:description" content="Trailers, reviews, and top lists of the best anime.">
-    <!-- Картинка --> <meta name="twitter:image" content="https://your-site.com/images/anime-preview.jpg">
-
-    <script src="js/main.js" defer></script>
-    <script src="js/anime.js" defer></script>
-    </head>
-
-    <body>
-        <header class="main-header">
-            <div class="container">
-                <div class="header-content">
-                    <h1 class="site-title">AnimeWorld</h1>
-                    <p class="site-subtitle">Discover the amazing world of anime</p>
-                    <a href="all-anime.html" class="all-anime-btn">View All Anime</a>
-                </div>
-            </div>
+    <title>All Anime – AnimeWorld</title>
+    <link rel="stylesheet" href="css/all-anime.css">
+    <link rel="stylesheet" href="css/all-anime_adaptation.css">
+    <link id="dynamic-favicon" rel="icon" href="img/favicons/icon1.png" type="image/png">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="site-title">All Anime</h1>
+            <p class="site-subtitle">Browse the entire anime collection</p>
+        </div>
 
             <!-- Смена цвета темы с Uiverse.io от rishichawda -->
             <label id="theme-toggle-button">
@@ -95,33 +70,30 @@
                     </g>
                 </svg>
             </label>
-        </header>
+    </header>
 
-        <main class="main-content">
-            <section class="hero-section">
-                <div class="container">
-                    <div class="search-container">
-                        <input type="text" id="anime-search" placeholder="Search anime..." class="search-input">
-                        <button class="search-btn">Search</button>
-                    </div>
-                    <div id="search-results" class="search-results"></div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-container">
-
-                <div class="footer-left">
-                    <p>© 2025 AnimeWorld. All rights reserved.</p>
-                </div>
-
-                <div class="footer-right">
-                    <a target="_blank" href="https://www.youtube.com/@serhiosergey"><img src="img/social/youtube.png" alt="YouTube"></a>
-                    <a target="_blank" href="https://www.instagram.com/k1wwij/"><img src="img/social/instagram.png" alt="Instagram"></a>
-                    <a target="_blank" href="https://github.com/kiwwij/anime-world"><img src="img/social/github.png" alt="GitHub"></a>
-                </div>
+    <main class="main-content">
+        <section class="all-anime-section">
+            <div class="container anime-grid" id="anime-grid">
             </div>
-        </footer>
-    </body>
+        </section>
+
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>© 2025 AnimeWorld. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a target="_blank" href="https://www.youtube.com/@serhiosergey"><img src="img/social/youtube.png" alt="YouTube"></a>
+                <a target="_blank" href="https://www.instagram.com/k1wwij/"><img src="img/social/instagram.png" alt="Instagram"></a>
+                <a target="_blank" href="https://github.com/kiwwij/anime-world"><img src="img/social/github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

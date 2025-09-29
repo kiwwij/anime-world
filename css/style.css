@@ -313,3 +313,74 @@ body.dark-theme .view-btn {
 body.dark-theme .view-btn:hover {
     background-color: #305ba6;
 }
+
+.all-anime-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.all-anime-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #0b91c6, #42c1f5);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(11, 145, 198, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.all-anime-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+}
+
+.all-anime-btn:hover::after {
+    left: 200%;
+}
+
+.all-anime-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(11, 145, 198, 0.5);
+    background: linear-gradient(135deg, #086a95, #1ca8d1);
+}
+
+/* -------------------- СВЕТЛАЯ ТЕМА КНОПКИ -------------------- */
+body:not(.dark-theme) .all-anime-btn {
+    background: linear-gradient(135deg, #ff7f50, #ffa07a);
+    box-shadow: 0 4px 12px rgba(255, 127, 80, 0.4);
+    color: #fff;
+}
+
+body:not(.dark-theme) .all-anime-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.25);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+}
+
+body:not(.dark-theme) .all-anime-btn:hover::after {
+    left: 200%;
+}
+
+body:not(.dark-theme) .all-anime-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(255, 127, 80, 0.5);
+    background: linear-gradient(135deg, #ff6347, #ff8c69);
+}
