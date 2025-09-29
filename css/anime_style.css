@@ -227,7 +227,11 @@ body {
 .lightbox-content {
     max-width: 90%;
     max-height: 90%;
+    object-fit: contain;
     border-radius: var(--border-radius);
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
 
 .close {

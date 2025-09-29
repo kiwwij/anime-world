@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("data/anime.json")
         .then(response => response.json())
         .then(data => {
-            // Получаем id аниме из URL
             const params = new URLSearchParams(window.location.search);
             const animeId = params.get("id");
 
@@ -17,13 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // ---- Динамическая подстановка данных ----
             document.title = `${anime.title} - AnimeWorld`;
-            
+
             // Основные данные
             document.getElementById("anime-title").textContent = anime.title;
             document.getElementById("anime-year").textContent = anime.year;
-            // Подставляем header
+
             const header = document.getElementById("anime-header");
             header.style.background = `url('${anime.images.header}') center/cover no-repeat`;
+
             document.getElementById("anime-genres").textContent = anime.genres.join(", ");
             document.getElementById("anime-duration").textContent = anime.duration;
             document.getElementById("anime-type").textContent = anime.type;
@@ -32,42 +32,37 @@ document.addEventListener("DOMContentLoaded", () => {
             // Постер
             document.getElementById("anime-poster").src = anime.images.poster;
 
-            // Получаем данные с Jikan
+            // --- Получаем данные с Jikan ---
             fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(anime.title)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.data && data.data.length > 0) {
-                // Найти точное совпадение по названию или взять первый результат
-                const jikanAnime = data.data.find(a => a.title === anime.title) || data.data[0];
+                .then(response => response.json())
+                .then(data => {
+                    if (data.data && data.data.length > 0) {
+                        const jikanAnime = data.data.find(a => a.title === anime.title) || data.data[0];
+                        const score = jikanAnime.score || 0;
 
-                // Рейтинг
-                const score = jikanAnime.score || 0;
-                document.getElementById("rating-value").textContent = `${score}/10`;
-                const starsCount = Math.round(score / 2);
-                document.getElementById("rating-stars").textContent =
-                    "★★★★★☆☆☆☆☆".slice(0, starsCount + 5).slice(0, 5);
+                        document.getElementById("rating-value").textContent = `${score}/10`;
+                        const starsCount = Math.round(score / 2);
+                        document.getElementById("rating-stars").textContent =
+                            "★★★★★☆☆☆☆☆".slice(0, starsCount + 5).slice(0, 5);
 
-                // Постер
-                const posterUrl = jikanAnime.images.jpg.large_image_url || anime.images.poster;
-                document.getElementById("anime-poster").src = posterUrl;
+                        document.getElementById("anime-poster").src =
+                            jikanAnime.images.jpg.large_image_url || anime.images.poster;
+                    } else {
+                        fallbackRating(anime);
+                        console.error("Anime not found in Jikan:", anime.title);
+                    }
+                })
+                .catch(err => {
+                    fallbackRating(anime);
+                    console.error(err);
+                });
 
-                } else {
-                // fallback на JSON
+            function fallbackRating(anime) {
                 document.getElementById("rating-value").textContent = `${anime.rating}/5`;
                 document.getElementById("rating-stars").textContent =
-                    "★★★★★".slice(0, Math.round(anime.rating)) + "☆☆☆☆☆".slice(Math.round(anime.rating));
-                document.getElementById("anime-poster").src = anime.images.poster;
-                console.error("Anime not found in Jikan:", anime.title);
-                }
-            })
-            .catch(err => {
-                // fallback на JSON
-                document.getElementById("rating-value").textContent = `${anime.rating}/5`;
-                document.getElementById("rating-stars").textContent =
-                "★★★★★".slice(0, Math.round(anime.rating)) + "☆☆☆☆☆".slice(Math.round(anime.rating));
-                document.getElementById("anime-poster").src = anime.images.poster;
-                console.error(err);
-            });
+                    "★★★★★".slice(0, Math.round(anime.rating)) +
+                    "☆☆☆☆☆".slice(Math.round(anime.rating));
+            }
 
             // Режиссер и актеры
             document.getElementById("anime-director").textContent = anime.director;
@@ -99,15 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 mangaCovers.appendChild(img);
             });
 
-            // Open Graph и Twitter
-            document.querySelector('meta[property="og:title"]').setAttribute("content", anime.title);
-            document.querySelector('meta[property="og:description"]').setAttribute("content", anime.description);
-            document.querySelector('meta[property="og:image"]').setAttribute("content", anime.images.poster);
-
-            document.querySelector('meta[name="twitter:title"]').setAttribute("content", anime.title);
-            document.querySelector('meta[name="twitter:description"]').setAttribute("content", anime.description);
-            document.querySelector('meta[name="twitter:image"]').setAttribute("content", anime.images.poster);
-
             // Lightbox
             initLightbox(anime.images.scenes);
         });
@@ -123,14 +109,21 @@ function initLightbox(imgArray) {
 
 function openLightbox(src) {
     currentIndex = images.indexOf(src);
-    document.getElementById("lightbox").style.display = "block";
-    document.getElementById("lightbox-img").src = src;
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightbox.style.display = "flex";
+    lightboxImg.src = src;
 }
 
-document.querySelector(".lightbox .close").addEventListener("click", () => {
-    document.getElementById("lightbox").style.display = "none";
+// Закрытие
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("close")) {
+        document.getElementById("lightbox").style.display = "none";
+    }
 });
 
+// Переключение стрелками
 document.querySelector(".lightbox .prev").addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     document.getElementById("lightbox-img").src = images[currentIndex];
@@ -139,4 +132,18 @@ document.querySelector(".lightbox .prev").addEventListener("click", () => {
 document.querySelector(".lightbox .next").addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
     document.getElementById("lightbox-img").src = images[currentIndex];
+});
+
+// Закрытие по клику на фон
+document.getElementById("lightbox").addEventListener("click", (e) => {
+    if (e.target.id === "lightbox") {
+        e.currentTarget.style.display = "none";
+    }
+});
+
+// Закрытие по клавише ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        document.getElementById("lightbox").style.display = "none";
+    }
 });

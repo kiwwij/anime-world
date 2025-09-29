@@ -107,5 +107,230 @@
                 "img/vinland_saga/manga/vol4.jpg"
             ]
         }
+    },
+
+  {
+    "id": "grand_blue_dreaming",
+    "title": "Grand Blue Dreaming",
+    "year": "2018",
+    "genres": ["Comedy", "Slice of Life", "Seinen"],
+    "duration": "24min per episode",
+    "type": "TV",
+    "language": "Japanese",
+    "director": "Shinji Takamatsu",
+    "cast": ["Yūma Uchida", "Ryōhei Kimura", "Chika Anzai", "Hiroki Yasumoto"],
+    "description": "College freshman Iori Kitahara moves to a seaside town for university and gets drawn into the diving club's chaotic drinking culture — a comedy about friendship, drinking, and the ocean.",
+    "quote": "The ocean's big — and so are the hangovers.",
+    "rating": 4.1,
+    "images": {
+      "poster": "img/grand_blue_dreaming/",
+      "header": "img/grand_blue_dreaming/header.avif",
+      "scenes": [
+        "img/grand_blue_dreaming/scenes/1.jpg",
+        "img/grand_blue_dreaming/scenes/2.jpg",
+        "img/grand_blue_dreaming/scenes/3.jpg"
+      ],
+      "manga": [
+        "img/grand_blue_dreaming/manga/vol1.jpg",
+        "img/grand_blue_dreaming/manga/vol2.jpg"
+      ]
     }
+  },
+
+  {
+    "id": "dandadan",
+    "title": "Dandadan",
+    "year": "2024",
+    "genres": ["Action", "Supernatural", "Comedy"],
+    "duration": "24min per episode",
+    "type": "TV",
+    "language": "Japanese",
+    "director": "Fūga Yamashiro (series director)",
+    "cast": ["Shion Wakayama", "Natsuki Hanae", "Nana Mizuki"],
+    "description": "A wild supernatural action-comedy following Momo (a spirit-medium family girl) and Okarun (an occult fanatic) as their argument about ghosts vs aliens drags them into bizarre, dangerous events and awakens strange powers.",
+    "quote": "Ghosts, aliens — pick a side and hold on tight.",
+    "rating": 4.4,
+    "images": {
+      "poster": "img/dandadan/poster.jpg",
+      "header": "img/dandadan/header.png",
+      "scenes": [
+        "img/dandadan/scenes/1.jpg",
+        "img/dandadan/scenes/2.jpg",
+        "img/dandadan/scenes/3.jpg"
+      ],
+      "manga": [
+        "img/dandadan/manga/vol1.jpg",
+        "img/dandadan/manga/vol2.jpg"
+      ]
+    }
+  },
+
+  {
+    "id": "sword_art_online_alicization",
+    "title": "Sword Art Online: Alicization",
+    "year": "2018-2020",
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "duration": "24min per episode",
+    "type": "TV",
+    "language": "Japanese",
+    "director": "Manabu Ono",
+    "cast": ["Yoshitsugu Matsuoka", "Haruka Tomatsu", "Ai Kayano", "Nobunaga Shimazaki"],
+    "description": "The Alicization arc expands the SAO world into a massive virtual-reality project — Kirito becomes entangled in a secret experiment and meets new allies while uncovering political and philosophical conflicts inside the virtual realm.",
+    "quote": "A virtual world can still break a real heart.",
+    "rating": 4.0,
+    "images": {
+      "poster": "img/sword_art_online_alicization/poster.jpg",
+      "header": "img/sword_art_online_alicization/header.webp",
+      "scenes": [
+        "img/sword_art_online_alicization/scenes/1.jpg",
+        "img/sword_art_online_alicization/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  },
+
+  {
+    "id": "rascal_does_not_dream_of_bunny_girl_senpai",
+    "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+    "year": "2018 (TV) / films 2019+",
+    "genres": ["Drama", "Romance", "Supernatural"],
+    "duration": "24min per episode (TV) / films vary",
+    "type": "TV",
+    "language": "Japanese",
+    "director": "Sōichi Masui",
+    "cast": ["Kaito Ishikawa", "Asami Seto", "Yurika Kubo", "Atsumi Tanezaki"],
+    "description": "Sakuta Azusagawa investigates 'Adolescence Syndrome' — mysterious psychosomatic phenomena affecting teenagers — starting with the case of Mai Sakurajima, the actress in a bunny suit whom only he can see.",
+    "quote": "Puberty has stranger rules than you think.",
+    "rating": 4.3,
+    "images": {
+      "poster": "img/rascal_does_not_dream_of_bunny_girl_senpai/poster.jpg",
+      "header": "img/rascal_does_not_dream_of_bunny_girl_senpai/header.jpg",
+      "scenes": [
+        "img/rascal_does_not_dream_of_bunny_girl_senpai/scenes/1.jpg",
+        "img/rascal_does_not_dream_of_bunny_girl_senpai/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  },
+
+  {
+    "id": "code_geass_lelouch_of_the_rebellion",
+    "title": "Code Geass: Lelouch of the Rebellion",
+    "year": "2006",
+    "genres": ["Mecha", "Drama", "Military"],
+    "duration": "24min per episode",
+    "type": "TV",
+    "language": "Japanese",
+    "director": "Gorō Taniguchi",
+    "cast": ["Jun Fukuyama", "Takahiro Sakurai", "Yukana", "Ami Koshimizu"],
+    "description": "Lelouch gains a power called Geass and uses it to challenge the Holy Britannian Empire while juggling politics, war, and complicated personal ties.",
+    "quote": "One man's rebellion can change the course of nations.",
+    "rating": 4.6,
+    "images": {
+      "poster": "img/code_geass_lelouch_of_the_rebellion/poster.jpg",
+      "header": "img/code_geass_lelouch_of_the_rebellion/header.jpg",
+      "scenes": [
+        "img/code_geass_lelouch_of_the_rebellion/scenes/1.jpg",
+        "img/code_geass_lelouch_of_the_rebellion/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  },
+
+  {
+    "id": "attack_on_titan",
+    "title": "Attack on Titan",
+    "year": "2013-2023",
+    "genres": ["Action", "Dark Fantasy", "Drama"],
+    "duration": "24min per episode",
+    "type": "TV",
+    "language": "Japanese",
+    "director": "Tetsurō Araki (season 1; multiple directors overall)",
+    "cast": ["Yūki Kaji", "Yui Ishikawa", "Marina Inoue", "Daisuke Ono"],
+    "description": "Humanity fights for survival against enormous humanoid Titans. Eren Yeager joins the Scout Regiment after witnessing the destruction of his hometown and strives to uncover the Titans' origin and the truth of the world.",
+    "quote": "If you win, you live. If you lose, you die. If you don't fight, you can't win.",
+    "rating": 4.7,
+    "images": {
+      "poster": "img/attack_on_titan/poster.jpg",
+      "header": "img/attack_on_titan/header.webp",
+      "scenes": [
+        "img/attack_on_titan/scenes/1.jpg",
+        "img/attack_on_titan/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  },
+
+  {
+    "id": "i_want_to_eat_your_pancreas",
+    "title": "I Want to Eat Your Pancreas",
+    "year": "2018",
+    "genres": ["Drama", "Romance"],
+    "duration": "1h 48min",
+    "type": "Movie",
+    "language": "Japanese",
+    "director": "Shinichiro Ushijima",
+    "cast": ["Mahiro Takasugi", "Lynn", "Yukiyo Fujii"],
+    "description": "A quiet high school boy finds a dying girl's diary and the two form an unexpected bond; a bittersweet coming-of-age drama about life, mortality, and human connection.",
+    "quote": "The distance between two people still has no name.",
+    "rating": 4.4,
+    "images": {
+      "poster": "img/i_want_to_eat_your_pancreas/poster.jpg",
+      "header": "img/i_want_to_eat_your_pancreas/header.jpg",
+      "scenes": [
+        "img/i_want_to_eat_your_pancreas/scenes/1.jpg",
+        "img/i_want_to_eat_your_pancreas/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  },
+
+  {
+    "id": "the_boy_and_the_heron",
+    "title": "The Boy and the Heron",
+    "year": "2023",
+    "genres": ["Fantasy", "Adventure", "Drama"],
+    "duration": "2h 4min",
+    "type": "Movie",
+    "language": "Japanese",
+    "director": "Hayao Miyazaki",
+    "cast": ["Soma Santoki", "Aimi Nao", "Keiko Takeshita"],
+    "description": "Hayao Miyazaki's fantasy about a boy who meets a mysterious heron and enters a dreamlike journey of memory and discovery.",
+    "quote": "A strange bird can lead you to the deepest questions.",
+    "rating": 4.5,
+    "images": {
+      "poster": "img/the_boy_and_the_heron/poster.jpg",
+      "header": "img/the_boy_and_the_heron/header.jpg",
+      "scenes": [
+        "img/the_boy_and_the_heron/scenes/1.jpg",
+        "img/the_boy_and_the_heron/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  },
+
+  {
+    "id": "my_demon_girl",
+    "title": "My Demon Girl",
+    "original_title": "Suki demo Kirai na Amanojaku",
+    "year": "2024",
+    "genres": ["Adventure", "Supernatural"],
+    "duration": "1h 42min",
+    "type": "Movie",
+    "language": "Japanese",
+    "director": "Tomotaka Shibayama",
+    "cast": ["Kenshō Ono", "Miyu Tomita", "Kanon Amane"],
+    "description": "A feature film about a determined girl searching for her missing mother who enlists a shy friend to help — a supernatural adventure with a demon/girlfriend angle (Japanese title: Suki demo Kirai na Amanojaku).",
+    "quote": "Sometimes the most stubborn friend is the one who finds the truth.",
+    "rating": 3.9,
+    "images": {
+      "poster": "img/my_demon_girl/poster.jpg",
+      "header": "img/my_demon_girl/header.jpg",
+      "scenes": [
+        "img/my_demon_girl/scenes/1.jpg",
+        "img/my_demon_girl/scenes/2.jpg"
+      ],
+      "manga": []
+    }
+  }
 ]
