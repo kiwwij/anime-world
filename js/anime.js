@@ -85,14 +85,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 scenesGrid.appendChild(img);
             });
 
-            // Манга
+            // Манга / Лайт-новелла
+            const mangaSection = document.querySelector(".manga-section");
+            const mangaTitle = mangaSection.querySelector("h3");
             const mangaCovers = document.getElementById("manga-covers");
-            anime.images.manga.forEach(manga => {
-                const img = document.createElement("img");
-                img.src = manga;
-                img.alt = anime.title + " manga volume";
-                mangaCovers.appendChild(img);
-            });
+
+            if (anime.images.manga && anime.images.manga.length > 0) {
+                mangaTitle.textContent = "Manga Volumes";
+                anime.images.manga.forEach(manga => {
+                    const img = document.createElement("img");
+                    img.src = manga;
+                    img.alt = anime.title + " manga volume";
+                    mangaCovers.appendChild(img);
+                });
+            } else if (anime.images.light_novel && anime.images.light_novel.length > 0) {
+                mangaTitle.textContent = "Ranobe / Light Novels";
+                anime.images.light_novel.forEach(novel => {
+                    const img = document.createElement("img");
+                    img.src = novel;
+                    img.alt = anime.title + " light novel volume";
+                    mangaCovers.appendChild(img);
+                });
+            } else {
+                // скрыть секцию, если ничего нет
+                mangaSection.style.display = "none";
+            }
 
             // Lightbox
             initLightbox(anime.images.scenes);

@@ -57,31 +57,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Формируем HTML с постерами через Jikan
-        searchResults.innerHTML = await Promise.all(results.map(async anime => {
-            let posterUrl = anime.images.poster; // fallback
+        searchResults.innerHTML = (await Promise.all(results.map(async anime => {
+        let posterUrl = anime.images.poster; // fallback
 
-            try {
-                const response = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(anime.title)}`);
-                const data = await response.json();
-                if (data.data && data.data.length > 0) {
-                    const match = data.data.find(a => a.title.toLowerCase() === anime.title.toLowerCase()) || data.data[0];
-                    posterUrl = match.images.jpg.large_image_url;
-                }
-            } catch (err) {
-                console.error("Jikan API error:", err);
+        try {
+            const response = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(anime.title)}`);
+            const data = await response.json();
+            if (data.data && data.data.length > 0) {
+                const match = data.data.find(a => a.title.toLowerCase() === anime.title.toLowerCase()) || data.data[0];
+                posterUrl = match.images.jpg.large_image_url;
             }
+        } catch (err) {
+            console.error("Jikan API error:", err);
+        }
 
-            return `
-                <div class="search-item">
-                    <img src="${posterUrl}" alt="${anime.title}" class="search-poster">
-                    <div class="search-info">
-                        <h3>${anime.title} (${anime.year})</h3>
-                        <p>${anime.genres.join(", ")}</p>
-                        <button onclick="location.href='anime.html?id=${anime.id}'" class="view-btn">View Details</button>
-                    </div>
+        return `
+            <div class="search-item">
+                <img src="${posterUrl}" alt="${anime.title}" class="search-poster">
+                <div class="search-info">
+                    <h3>${anime.title} (${anime.year})</h3>
+                    <p>${anime.genres.join(", ")}</p>
+                    <button onclick="location.href='anime.html?id=${anime.id}'" class="view-btn">View Details</button>
                 </div>
-            `;
-        }));
+            </div>
+        `;
+    }))).join("");
+
 
     }
 

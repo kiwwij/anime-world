@@ -123,7 +123,7 @@
     "quote": "The ocean's big — and so are the hangovers.",
     "rating": 4.1,
     "images": {
-      "poster": "img/grand_blue_dreaming/",
+      "poster": "img/grand_blue_dreaming/poster.webp",
       "header": "img/grand_blue_dreaming/header.avif",
       "scenes": [
         "img/grand_blue_dreaming/scenes/1.jpg",
@@ -132,7 +132,9 @@
       ],
       "manga": [
         "img/grand_blue_dreaming/manga/vol1.jpg",
-        "img/grand_blue_dreaming/manga/vol2.jpg"
+        "img/grand_blue_dreaming/manga/vol2.jpg",
+        "img/grand_blue_dreaming/manga/vol3.jpg",
+        "img/grand_blue_dreaming/manga/vol4.jpg"
       ]
     }
   },
@@ -160,7 +162,9 @@
       ],
       "manga": [
         "img/dandadan/manga/vol1.jpg",
-        "img/dandadan/manga/vol2.jpg"
+        "img/dandadan/manga/vol2.jpg",
+        "img/dandadan/manga/vol3.jpg",
+        "img/dandadan/manga/vol4.jpg"
       ]
     }
   },
@@ -180,12 +184,17 @@
     "rating": 4.0,
     "images": {
       "poster": "img/sword_art_online_alicization/poster.jpg",
-      "header": "img/sword_art_online_alicization/header.webp",
+      "header": "img/sword_art_online_alicization/header.jpg",
       "scenes": [
         "img/sword_art_online_alicization/scenes/1.jpg",
         "img/sword_art_online_alicization/scenes/2.jpg"
       ],
-      "manga": []
+      "manga": [
+        "img/sword_art_online_alicization/manga/vol1.jpg",
+        "img/sword_art_online_alicization/manga/vol2.jpg",
+        "img/sword_art_online_alicization/manga/vol3.jpg",
+        "img/sword_art_online_alicization/manga/vol4.jpg"
+      ]
     }
   },
 
@@ -209,7 +218,14 @@
         "img/rascal_does_not_dream_of_bunny_girl_senpai/scenes/1.jpg",
         "img/rascal_does_not_dream_of_bunny_girl_senpai/scenes/2.jpg"
       ],
-      "manga": []
+      "manga": [],
+
+      "light_novel": [
+        "img/rascal_does_not_dream_of_bunny_girl_senpai/manga/vol1.webp",
+        "img/rascal_does_not_dream_of_bunny_girl_senpai/manga/vol2.webp",
+        "img/rascal_does_not_dream_of_bunny_girl_senpai/manga/vol3.webp",
+        "img/rascal_does_not_dream_of_bunny_girl_senpai/manga/vol4.webp"
+      ]
     }
   },
 
@@ -233,7 +249,12 @@
         "img/code_geass_lelouch_of_the_rebellion/scenes/1.jpg",
         "img/code_geass_lelouch_of_the_rebellion/scenes/2.jpg"
       ],
-      "manga": []
+      "manga": [
+        "img/code_geass_lelouch_of_the_rebellion/manga/vol1.jpg",
+        "img/code_geass_lelouch_of_the_rebellion/manga/vol2.jpg",
+        "img/code_geass_lelouch_of_the_rebellion/manga/vol3.jpg",
+        "img/code_geass_lelouch_of_the_rebellion/manga/vol4.jpg"
+      ]
     }
   },
 
@@ -257,7 +278,12 @@
         "img/attack_on_titan/scenes/1.jpg",
         "img/attack_on_titan/scenes/2.jpg"
       ],
-      "manga": []
+      "manga": [
+        "img/attack_on_titan/manga/vol1.jpg",
+        "img/attack_on_titan/manga/vol2.jpg",
+        "img/attack_on_titan/manga/vol3.jpg",
+        "img/attack_on_titan/manga/vol4.jpg"
+      ]
     }
   },
 
@@ -281,7 +307,10 @@
         "img/i_want_to_eat_your_pancreas/scenes/1.jpg",
         "img/i_want_to_eat_your_pancreas/scenes/2.jpg"
       ],
-      "manga": []
+      "manga": [
+        "img/i_want_to_eat_your_pancreas/manga/vol1.jpg",
+        "img/i_want_to_eat_your_pancreas/manga/vol2.jpg"
+      ]
     }
   },
 
@@ -310,8 +339,8 @@
   },
 
   {
-    "id": "my_demon_girl",
-    "title": "My Demon Girl",
+    "id": "my_oni_girl",
+    "title": "My Oni Girl",
     "original_title": "Suki demo Kirai na Amanojaku",
     "year": "2024",
     "genres": ["Adventure", "Supernatural"],
@@ -324,13 +353,12 @@
     "quote": "Sometimes the most stubborn friend is the one who finds the truth.",
     "rating": 3.9,
     "images": {
-      "poster": "img/my_demon_girl/poster.jpg",
-      "header": "img/my_demon_girl/header.jpg",
+      "poster": "img/my_oni_girl/poster.jpg",
+      "header": "img/my_oni_girl/header.jpg",
       "scenes": [
-        "img/my_demon_girl/scenes/1.jpg",
-        "img/my_demon_girl/scenes/2.jpg"
-      ],
-      "manga": []
+        "img/my_oni_girl/scenes/1.jpg",
+        "img/my_oni_girl/scenes/2.jpg"
+      ]
     }
   }
 ]
