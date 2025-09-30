@@ -247,3 +247,23 @@ body.dark-theme .back-btn:hover {
         font-size: 0.85rem;
     }
 }
+
+a.anime-title-link {
+    text-decoration: none;
+    color: inherit; 
+    transition: color 0.3s ease;
+}
+
+a.anime-title-link:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+body.dark-theme a.anime-title-link {
+    color: #dce7ff;
+}
+
+body.dark-theme a.anime-title-link:hover {
+    color: #81c3ff;
+    text-decoration: underline;
+}

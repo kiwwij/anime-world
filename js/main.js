@@ -123,7 +123,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <a href="anime.html?id=${anime.id}">
                     <img src="${posterUrl}" alt="${anime.title}">
                 </a>
-                <h3>${anime.title}</h3>
+                <a href="anime.html?id=${anime.id}" class="anime-title-link">
+                    <h3>${anime.title}</h3>
+                </a>
                 <p>${anime.genres.join(', ')} | ${anime.duration}</p>
             `;
             grid.appendChild(card);
