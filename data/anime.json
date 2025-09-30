@@ -332,7 +332,10 @@
       "header": "img/the_boy_and_the_heron/header.jpg",
       "scenes": [
         "img/the_boy_and_the_heron/scenes/1.jpg",
-        "img/the_boy_and_the_heron/scenes/2.jpg"
+        "img/the_boy_and_the_heron/scenes/2.jpg",
+        "img/the_boy_and_the_heron/scenes/3.jpg",
+        "img/the_boy_and_the_heron/scenes/4.jpg",
+        "img/the_boy_and_the_heron/scenes/5.jpg"
       ],
       "manga": []
     }
@@ -357,7 +360,9 @@
       "header": "img/my_oni_girl/header.jpg",
       "scenes": [
         "img/my_oni_girl/scenes/1.jpg",
-        "img/my_oni_girl/scenes/2.jpg"
+        "img/my_oni_girl/scenes/2.jpg",
+        "img/my_oni_girl/scenes/3.jpg",
+        "img/my_oni_girl/scenes/4.jpg"
       ]
     }
   }
